@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tribu Web</title>
+</head>
+<body>
+    <h1>Liste de mes prez pour la tribus Web</h1>
+
+    <ul>
+        {{#each presentations}}
+        <li><a href="{{link}}">{{date}} - {{name}}</a></li>
+        {{/each}}
+    </ul>
+</body>
+</html>
