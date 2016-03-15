@@ -6,12 +6,16 @@
   "scripts": {
     "test": "eslint **/*.js",
     "start": "gulp serve",
-    "deploy": "./script/ghpage.sh",
+    "deploy": "./scripts/deploy-gh-pages.sh",
     "build": "gulp build"
   },
   "author": "FBerthelot <florent.berthelot35@gmail.com>",
   "license": "SEE LICENSE IN LICENSE.md FILE",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FBerthelot/tribu-web-prez"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
@@ -22,6 +26,7 @@
     "gulp-rename": "^1.2.2",
     "handlebars": "^4.0.5",
     "moment": "^2.12.0",
+    "run-sequence": "^1.1.5",
     "wrench": "^1.5.8"
   },
   "dependencies": {
