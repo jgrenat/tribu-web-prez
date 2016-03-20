@@ -57,9 +57,9 @@ gulp.task('build:prezData', () => {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:js', () => {
+gulp.task('build:other', () => {
     return gulp
-        .src(path.join(__dirname, '../src/*.js'))
+        .src([path.join(__dirname, '../src/*.js'), path.join(__dirname, '../src/*.css')])
         .pipe(gulp.dest('dist'));
 });
 
@@ -72,7 +72,7 @@ gulp.task('build:modules', () => {
 
 /** The main task, it build all prez **/
 gulp.task('build', ['clean'], (done) => {
-    require('run-sequence')(tasks, 'build:js', 'build:prezList', 'build:prezData', 'build:modules', () => {
+    require('run-sequence')(tasks, 'build:other', 'build:prezList', 'build:prezData', 'build:modules', () => {
         done();
     });
 });
