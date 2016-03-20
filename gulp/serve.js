@@ -14,7 +14,7 @@ gulp.task('serve', ['build'], () => {
     });
 
     gulp.watch(path.join(__dirname, '../prez/**/*'), ['serve:reload']);
-    gulp.watch(path.join(__dirname, '../template/*.html'), ['serve:reload']);
+    gulp.watch(path.join(__dirname, '../src/*'), ['serve:reload']);
 });
 
 gulp.task('serve:reload', ['build'], browserSync.reload);

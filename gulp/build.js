@@ -17,21 +17,22 @@ for (let prez of fileInPrezDir) {
     if (!fs.lstatSync(pathToPrez + '/' + prez).isDirectory()) { continue; }
 
     const curTask = 'build:' + prez;
-    tasks.push(curTask);
-    prezInfo.push({
+    let curData = {
         link: prez + '.html',
         date: moment(prez.split('_')[0], 'YYYY-MM-DD').format('DD-MM-YYYY'),
-        name: prez.split('_')[1]
-    });
+        name: prez.split('_')[1],
+        md: {
+            index: prez + '/index.md'
+        }
+    };
+
+    tasks.push(curTask);
+    prezInfo.push(curData);
 
     gulp.task(curTask, () => {
-        let data = {
-            markdown: fs.readFileSync(pathToPrez + '/' + prez + '/index.md')
-        };
-
         return gulp
-            .src(path.join(__dirname, '../template/presentation.html'))
-            .pipe(handlebars(data, {}))
+            .src(path.join(__dirname, '../src/presentation.html'))
+            .pipe(handlebars(curData, {}))
             .pipe(rename(prez + '.html'))
             .pipe(gulp.dest('dist'));
     });
@@ -44,21 +45,34 @@ gulp.task('build:prezList', () => {
     };
 
     return gulp
-        .src(path.join(__dirname, '../template/index.html'))
+        .src(path.join(__dirname, '../src/index.html'))
         .pipe(handlebars(data, {}))
+        .pipe(gulp.dest('dist'));
+});
+
+/** Copy markdown and images **/
+gulp.task('build:prezData', () => {
+    return gulp
+        .src(path.join(__dirname, '../prez/**/*'), {base: 'prez'})
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build:js', () => {
+    return gulp
+        .src(path.join(__dirname, '../src/*.js'))
         .pipe(gulp.dest('dist'));
 });
 
 /** copy reveal.js */
 gulp.task('build:modules', () => {
     return gulp
-        .src(path.join(__dirname, '../node_modules/reveal.js/**/*'), { "base" : "." })
+        .src(path.join(__dirname, '../node_modules/reveal.js/**/*'), { base: '.' })
         .pipe(gulp.dest('dist'));
 });
 
 /** The main task, it build all prez **/
 gulp.task('build', ['clean'], (done) => {
-    require('run-sequence')(tasks, 'build:prezList', 'build:modules', () => {
+    require('run-sequence')(tasks, 'build:js', 'build:prezList', 'build:prezData', 'build:modules', () => {
         done();
     });
 });

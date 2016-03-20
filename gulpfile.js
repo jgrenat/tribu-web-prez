@@ -8,4 +8,4 @@ wrench
     .filter((file) => { return (/\.(js)$/i).test(file); })
     .map((file) => { require('./gulp/' + file); });
 
-gulp.task('default', ['lint']);
+gulp.task('default', ['lint', 'build']);
