@@ -1,33 +1,38 @@
 <!-- .slide: data-background="#ffffff" -->
 # RÉUNION TRIBU WEB
-![](/2016-03-30-tp_React/tribu_web.png)
+
+<img src="/2016-03-30-tp_React/tribu_web.png" style="height: 300px">
+
 30 mars 2016
 
 
 
-## La tribu Web
+## L'attribut Web
 
-M. Lux & M. Gaulard s'occupe du pôle
+<img src="/2016-03-30-tp_React/demey.jpg" 
+     style="
+        position: absolute;
+        left: 5%;
+        height: 35%;">
+         
+<p style="position: absolute;
+          margin-left: 25%;
+          top: 30%;">et moi-même co-leadons la tribu</p>
+
+<p style="margin-top: 35%; font-weight: bold;">Mais la tribu, c'est vous !</p>
 
 
-## La tribu Web
-
-M. Demey et M. Berthelot co-lead la tribu
-
-**Mais la tribu, c'est vous !**
-
-
-## La tribu Web
+## Que puis-je faire ?
 
  - Meetup
  - Conférences
- - Venir Ici
+ - Venir ici
  - Autre ?
 
 
-## La tribu Web
+## < zenika web="awesome" >
 
-Nos actions :
+Les prochaines actions :
 
  - NightClazz NG-2
  - Paris.js va venir (mai ?)
@@ -36,21 +41,36 @@ Nos actions :
 
 
 
+## Le pôle Web
+
+![](/2016-03-30-tp_React/m.lux.png)
+
+![](/2016-03-30-tp_React/m.gaulard.jpg)
+
+
+
 ## Place au spectacle
+
+![](/2016-03-30-tp_React/react.png)
 
 TP react par Etienne Combrez
 
 
 
+## La prochaine action
+
+![](/2016-03-30-tp_React/ng2.jpg)
+
+<img src="/2016-03-30-tp_React/nightclazz.png" 
+     style="
+        position: absolute;
+        right: 12%;
+        top: 78%;
+        height: 15%;">
+
+
+
 ## La prochaine Réunion
 
-Vote sur le format :
- - TP
- - Des prez
- - Autre ?
-
-
-## La prochaine réunion
-
-Le(s) prochain(s) sujet(s) ?
+Qui a eu des talks refusé récement ?
 
