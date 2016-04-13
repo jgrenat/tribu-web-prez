@@ -1,7 +1,7 @@
 <!-- .slide: data-background="#ffffff" -->
 # RÉUNION TRIBU WEB
 
-<img src="/2016-03-30-tp_React/tribu_web.png" style="height: 300px">
+<img src="2016-03-30-tp_React/tribu_web.png" style="height: 300px">
 
 30 mars 2016
 
@@ -9,7 +9,7 @@
 
 ## L'attribut Web
 
-<img src="/2016-03-30-tp_React/demey.jpg" 
+<img src="2016-03-30-tp_React/demey.jpg" 
      style="
         position: absolute;
         left: 5%;
@@ -43,15 +43,15 @@ Les prochaines actions :
 
 ## Le pôle Web
 
-![](/2016-03-30-tp_React/m.lux.png)
+![](2016-03-30-tp_React/m.lux.png)
 
-![](/2016-03-30-tp_React/m.gaulard.jpg)
+![](2016-03-30-tp_React/m.gaulard.jpg)
 
 
 
 ## Place au spectacle
 
-![](/2016-03-30-tp_React/react.png)
+![](2016-03-30-tp_React/react.png)
 
 TP react par Etienne Combrez
 
@@ -59,9 +59,9 @@ TP react par Etienne Combrez
 
 ## La prochaine action
 
-![](/2016-03-30-tp_React/ng2.jpg)
+![](2016-03-30-tp_React/ng2.jpg)
 
-<img src="/2016-03-30-tp_React/nightclazz.png" 
+<img src="2016-03-30-tp_React/nightclazz.png" 
      style="
         position: absolute;
         right: 12%;
