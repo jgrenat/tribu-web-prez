@@ -53,7 +53,7 @@ Les prochaines actions :
 
 ![](2016-03-30-tp_React/react.png)
 
-TP react par Etienne Combrez
+TP react par Etienne Crombez
 
 
 
