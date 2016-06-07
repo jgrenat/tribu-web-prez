@@ -15,12 +15,21 @@ let tasks = [];
 let prezInfo = [];
 for (let prez of fileInPrezDir) {
     if (!fs.lstatSync(pathToPrez + '/' + prez).isDirectory()) { continue; }
+    
+    //require additional informations from js/json files
+    let additionnalInfo = {};
+    try {
+        additionnalInfo = require(pathToPrez + '/' + prez + '/info');
+    } catch (e) {
+        console.info('You can customize descriptions and other with a info.json file for ', prez);
+    }
 
     const curTask = 'build:' + prez;
     let curData = {
-        link: prez + '.html',
+        link: prez.toLowerCase() + '.html',
         date: moment(prez.split('_')[0], 'YYYY-MM-DD').format('DD-MM-YYYY'),
-        name: prez.split('_')[1],
+        name: additionnalInfo.name || prez.split('_')[1].split('-').join(' '),
+        title: additionnalInfo.title || prez.split('_')[1].split('-').join(' '),
         md: {
             index: prez + '/index.md'
         }

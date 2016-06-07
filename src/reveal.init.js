@@ -60,7 +60,7 @@ Reveal.initialize({
         hideAddressBar: true,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style
         transition: 'default', // none/fade/slide/convex/concave/zoom
@@ -103,4 +103,16 @@ Reveal.initialize({
                 // MathJax
                 { src: 'node_modules/reveal.js/plugin/math/math.js', async: true }
         ]
+});
+
+Reveal.addEventListener('slidechanged', function(event) {
+        window.location.hash = event.indexh + '/' + event.indexv;
+});
+
+Reveal.addEventListener('ready', function () {
+    var indexh = window.location.hash && window.location.hash.split('/')[0].replace('#', '');
+    var indexv = window.location.hash && window.location.hash.split('/')[1];
+    if (indexh && indexv) {
+        Reveal.slide(indexh, indexv);
+    }
 });
