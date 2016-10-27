@@ -30,7 +30,7 @@ Difficile de faire la différence sur les stores
 > Données Quettra
 
 Notes:
-A chaque étape du téléchargemtn d'un app on perd 20% des utilisateurs
+A chaque étape du téléchargement d'une app on perd 20% des utilisateurs
 UAQ (Utilisateurs actifs quotidien)
 
 
@@ -39,11 +39,20 @@ UAQ (Utilisateurs actifs quotidien)
 
 PWA = Une web app normal qui rocks !
 
-Notes:
-- responsive
-- offline
-- installable
-- comportement qui s'enrichie en fonction des capacité du navigateurs
+
+<!-- .slide: data-background="#00ffc4" -->
+## Caractéristiques
+
+- Progressif
+- Responsive
+- Gère le Hors-ligne
+- Resemble à une APP
+- À jour
+- Sécurisé
+- Découvrable
+- Re-engageable
+- Installable
+- Linkable
 
 
 <!-- .slide: data-background="#00ffc4" -->
