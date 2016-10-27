@@ -47,7 +47,7 @@ PWA = Une web app normal qui rocks !
 - Responsive
 - Gère le Hors-ligne
 - Resemble à une APP
-- À jour
+- Données à jour
 - Sécurisé
 - Découvrable
 - Re-engageable
